@@ -1,6 +1,6 @@
 // Returning rock, paper, scissors randomly 
 function computerPlay() {
-    let choices = ['Rock', 'Paper','Scissor'];
+    let choices = ['Rock', 'Paper','Scissors'];
     let computerChoice = choices[Math.floor(Math.random() * choices.length)];
     return computerChoice; 
 }
@@ -10,26 +10,19 @@ function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
     computerSelection = computerSelection.toLowerCase();
     if (playerSelection == computerSelection) {
-        console.log(`It's a draw ${computerSelection} ${playerSelection}`);
         return `It's a draw`;
     } else if (playerSelection == 'paper' && computerSelection == 'rock') {
-        console.log(`You won! ${computerSelection} ${playerSelection}`);
         return `You won!`;
     } else if (playerSelection == 'paper' && computerSelection == 'scissors') {
-        console.log(`You lose ${computerSelection} ${playerSelection}`);
         return `You lose`;
     } else if (playerSelection == 'rock' && computerSelection == 'scissors') {
-        console.log(`You won! ${computerSelection} ${playerSelection}`);
         return `You won!`;
     } else if (playerSelection == 'rock' && computerSelection == 'paper'){
-        console.log(`You lose ${computerSelection} ${playerSelection}`);
         return `You lose`;
     } else if (playerSelection == 'scissors' && computerSelection == 'rock') {
-        console.log(`You lose ${computerSelection} ${playerSelection}`);
         return `You lose`;
     } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
-        console.log(`You won! ${computerSelection} ${playerSelection}`);
-        return `You won`;
+        return `You won!`;
     }
 }
 
@@ -58,7 +51,10 @@ for(let i=0; i<5; i++) {
         computerScore++;
     }    
 }
-console.log(endWinner(playerScore, computerScore));
 
+function returnWinner() {
+    return endWinner(playerScore, computerScore);
+}
 
+returnWinner();
 
