@@ -43,16 +43,19 @@ function play(){
             results.style["color"] = '#f5427b';
             results.style['font-size'] = '40px';
             results.innerHTML = "You've won from a computer!\n Congrats!!";
+            disable();
         }
         else if (playerScore < computerScore) {
             results.style["color"] = '#f5427b';
             results.style['font-size'] = '40px';
             results.innerHTML = "You've lost from a computer!";
+            disable();
         }
         else {
             results.style["color"] = '#f5427b';
             results.style['font-size'] = '40px';
             results.innerHTML = "No one won\nIt's a tie";
+            disable();
         }
     }
 
