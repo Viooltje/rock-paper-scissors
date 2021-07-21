@@ -1,14 +1,22 @@
+// make gui responsive
+const rock = document.querySelector("#rock");
+const paper = document.querySelector('#paper');
+const scissors = document.querySelector('#scissors');
+rock.addEventListener('click', playRound('rock'));
+paper.addEventListener('click', playRound('paper'));
+scissors.addEventListener('click', playRound('scissors'));
+
 // Returning rock, paper, scissors randomly 
 function computerPlay() {
-    let choices = ['Rock', 'Paper','Scissors'];
+    let choices = ['rock', 'paper','scissors'];
     let computerChoice = choices[Math.floor(Math.random() * choices.length)];
     return computerChoice; 
 }
 
 // Determine winner of 1 round
 function playRound(playerSelection, computerSelection) {
-    playerSelection = playerSelection.toLowerCase();
-    computerSelection = computerSelection.toLowerCase();
+    //playerSelection = playerSelection.toLowerCase();
+    //computerSelection = computerSelection.toLowerCase();
     if (playerSelection == computerSelection) {
         return `It's a draw`;
     } else if (playerSelection == 'paper' && computerSelection == 'rock') {

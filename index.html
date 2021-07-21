@@ -1,12 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel='stylesheet' href='style.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
 <title>Page Title</title>
 </head>
 <body>
 
 <h1>Rock Paper Scissors</h1>
-<p>My first paragraph.</p>
-<script src='rps.js'></script>
+<h2 id='explain'>Choose a button</h2>
+<p id='end-result'></p>
+<div id="game-info">
+    <div id='player'>
+        <h2>Your choice</h2>
+        <h3 id='player-choice'>- </h3>
+        <h2>Your score</h2>
+        <h3 id='player-score'>0</h3>
+    </div>
+    <div id="computer">
+        <h2>Computer choice</h2>
+        <h3 id='comp-choice'>- </h3>
+        <h2>Computer score</h2>
+        <h3 id='comp-score'>0</h3>
+    </div>
+
+</div>
+<div id='buttons'>
+    <button class='button' id='rock'>Rock</button>
+    <button class='button' id='paper'>Paper</button>
+    <button class='button' id='scissors'>Scissors</button>
+</div>
+<script src='script.js'></script>
 </body>
 </html> 
